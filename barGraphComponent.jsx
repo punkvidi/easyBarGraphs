@@ -17,7 +17,9 @@ const barGraph = (props) => {
   //  }
   // make sure that if passed down to adjust the for loop how you wish for it to be counted
   const barHeight = props.modeRatings ;
-
+  // previously I used line 19 this to determine the largest piece of the bar graph and scale the rest of the bar graphs to it. 
+  // This can be easily removed and switched to an arbitrary number
+  
   let returner = [];
 
   for (let i = 5; i >= 1; i--) {
@@ -42,6 +44,7 @@ const barGraph = (props) => {
   }
 
   return <div>{returner}</div>;
+  // returns a div this element can be easily swaped out to whichever codebase standard you use
 };
 
 const BarGraphComponents = (props) => {
