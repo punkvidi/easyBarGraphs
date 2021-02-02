@@ -7,7 +7,7 @@ const barGraph = (props) => {
   console.log(props)
   const data = props.ratings
   // props.ratings should be passed down as an object or an array ie
-  // [3, 4, 5, 6, 7, 8] or 
+  // [3, 4, 5, 6, 7] or 
   // {
   //  1: 2,
   //  2: 3,
@@ -16,8 +16,9 @@ const barGraph = (props) => {
   //  5: 2,  
   //  }
   // make sure that if passed down to adjust the for loop how you wish for it to be counted
-  const barHeight = props.modeRatings ;
-  // previously I used line 19 this to determine the largest piece of the bar graph and scale the rest of the bar graphs to it. 
+  const barLength = props.modeRatings ;
+  // previously I used line 19 this to determine the largest piece of the bar graph and scale the rest of the bar graphs to it, 
+  // with the largest number being %100 of the bar graphs length
   // This can be easily removed and switched to an arbitrary number
   
   let returner = [];
@@ -37,7 +38,7 @@ const barGraph = (props) => {
         <BarGraphComponents
           value={i}
           data={variable}
-          barHeight={barHeight}
+          barLength={barLength}
         />
       </div>
     );
@@ -48,7 +49,7 @@ const barGraph = (props) => {
 };
 
 const BarGraphComponents = (props) => {
-  let completed = Math.floor((props.data / props.barHeight) * 100);
+  let completed = Math.floor((props.data / props.barLength) * 100);
   const containerStyles = {
     height: ".52vw",
     width: '11vw',
