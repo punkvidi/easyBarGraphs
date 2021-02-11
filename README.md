@@ -1,7 +1,7 @@
 # easyBarGraphs
-Easily reuseable bargraph graphic. I far prefer to build my own graphics over using dependencies due to them being hard to style 
+Easily reuseable bargraph graphic. I far prefer to build my own graphics over using dependencies due to imported bar graphs being hard to style 
 
-Final Result in a minimalistic design 
+Final Result with a minimalistic design 
 
 
 
